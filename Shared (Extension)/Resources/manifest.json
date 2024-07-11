@@ -20,11 +20,10 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [
-            "https://*.medium.com/*",
-            "https://levelup.gitconnected.com/*"
-        ]
+        "matches": [ "http://*/*", "https://*/*", "<all_urls>" ]
     }],
+    
+    "host_permissions": ["http://*/*", "https://*/*"],
 
     "action": {
         "default_popup": "popup.html",
@@ -43,5 +42,5 @@
         "tabs",
         "scripting",
         "messaging"
-    ],
+    ]
 }
