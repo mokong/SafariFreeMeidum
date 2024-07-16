@@ -12,8 +12,11 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 function freeUrl(url) {
     const urlObj = new URL(url);
-    if (url.host !== "freedium.cfd") {
-        urlObj.host = "freedium.cfd";
+//    if (url.host !== "freedium.cfd") {
+//        urlObj.host = "freedium.cfd";
+//    }
+    if (url.host !== "readmedium.com") {
+        urlObj.host = "readmedium.com";
     }
     return urlObj.href;
 }
